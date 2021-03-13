@@ -1,0 +1,28 @@
+.header {
+}
+.header__list
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 1em;
+}
+.header__logo
+{
+
+}
+.nav {
+
+}
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+}
+.nav__item {
+	margin:0 1em;
+}
+.nav__link {
+	padding: 0.3em;
+	font-size: 1.6em;
+	font-weight: 600;
+}
