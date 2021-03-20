@@ -1,0 +1,153 @@
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+	font-weight: inherit;
+	font-size: inherit;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+}
+
+canvas,
+video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	max-width: 100%;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+input {
+	transition: 0.4s all ease-in-out;
+}
+
+input:invalid,
+input:focus:invalid {
+	box-shadow: 0 0 3px 2px red;
+	border-color: red;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	background-color: transparent;
+	outline: 0;
+	&:active,
+	&:hover {
+		outline: 0;
+	}
+}
+::-moz-selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+
+details {
+	display: block;
+}
+
+summary {
+	display: list-item;
+}
+
+progress {
+	vertical-align: baseline;
+}
+
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+button,
+input {
+	overflow: visible;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+button {
+	outline: none;
+}
+

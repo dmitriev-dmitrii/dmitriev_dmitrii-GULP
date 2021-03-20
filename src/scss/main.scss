@@ -1,24 +1,62 @@
+@import "global/reset-normalize.scss";
 
-/* общие стили для всех страниц  */
-// @import "global/reset.scss";
-@import "global/colors.scss";
-@import "global/body.scss";
+@mixin font($url, $family, $weight, $style) 
+{
+	@font-face {
+		font-display: swap;
+		font-family: $family;
+		font-style: #{$style};
+		font-weight: $weight;
+		src: 
+		url("../fonts/#{$url}.woff2") format("woff2"),
+		url("../fonts/#{$url}.woff") format("woff");
+	}
+}
 
-/* общие стили для всех страниц  */
+@import "global/fonts.scss";
 
-/*  общие компоненты для страниц */
+html {
+	--accentColor: #1c62cd;
+	--bgColor: #f0f0f4;
+	--bodyColor: #ffff;
+	--mainTxtColor: #2f3035;
+	--minorTxtColor: #c4c4c4;
+}
 
+// :root
+// {
 
-@import "components/footer.scss";
+// }
+
+body {
+	background: var(--BodyColor);
+	color: var(--mainTxtColor);
+	font-family: "Montserrat", sans-serif;
+	font-size: 62.5%;
+	font-weight: 300;
+	line-height: 1;
+	scroll-behavior: smooth;
+}
+
+.contanier {
+	overflow: hidden;
+	padding: 1rem;
+}
+
+img {
+	&:after {
+		background-color: var(--bodyColor);
+		color: var(--mainTxtColor);
+		content: "\f1c5"" " attr(alt);
+		display: block;
+		font-size: 2rem;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+	}
+}
 
 @import "components/header.scss";
-
-
-/*  общие компоненты для страниц */
-
-/* стили отдельных блоков */
-
-
-/* стили отдельных блоков */
-
-

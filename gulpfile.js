@@ -41,7 +41,7 @@ const buildHtml = () => {
 // Конвертирует scss в css
 
 const translateScss = () => {
-    return src('src/scss/**/*.scss')
+    return src('src/scss/*.scss')
     .pipe(scss({
         outputStyle: 'expanded'
     }))
@@ -54,7 +54,7 @@ const translateScss = () => {
 
 
 const buildCss = () => {
-    return src('src/scss/**/*.scss')
+    return src('src/scss/*.scss')
     .pipe(sourcemaps.init())
     .pipe(scss({
         outputStyle: 'expanded'
@@ -123,7 +123,7 @@ const fonts = async () => {
     del.sync('app/fonts');
 
     const srcFonts = 'src/fonts/';
-    const generateScssFonts = 'src/scss/helpers/_fonts.scss';
+    const generateScssFonts = 'src/scss/global/_fonts.scss';
 
     // форматирование в woff
     src('src/fonts/**/*.ttf')
@@ -133,6 +133,15 @@ const fonts = async () => {
     // форматирование в woff2
     src('src/fonts/**/*.ttf')
     .pipe(ttf2woff2())
+    .pipe(dest('app/fonts'));
+
+    // просто копирует
+    
+    src('src/fonts/**/*.woff2')
+    .pipe(dest('app/fonts'));
+    // просто копирует
+
+    src('src/fonts/**/*.woff')
     .pipe(dest('app/fonts'));
 
     // добавление шрифтов в fonts.scss
